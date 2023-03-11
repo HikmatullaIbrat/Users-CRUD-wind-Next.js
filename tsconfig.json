@@ -15,7 +15,11 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./*"]
+=======
+      "@component/*": ["./*"]
+>>>>>>> 3b8385c (tailwind added)
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
