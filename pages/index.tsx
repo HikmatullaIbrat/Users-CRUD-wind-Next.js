@@ -1,10 +1,8 @@
 import Head from 'next/head';
 
-
-
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
-import styles from '@component/styles/Home.module.css';
+// import styles from '@component/styles/Home.module.css';
 import  Table from '../components/table';
 import { BiUserPlus } from "react-icons/bi";
 import Form from '../components/form';
@@ -12,12 +10,8 @@ import { useState  } from 'react';
 // const inter = Inter({ subsets: ['latin'] })
 
 
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-
-
-
-
+// import Image from 'next/image';
+// import { Inter } from 'next/font/google';
 export default function Home() {
   const [visible, setVisible] = useState(false)
   // show addemployee form, if addEmployee button clicked or else don't show form

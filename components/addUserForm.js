@@ -11,6 +11,7 @@ const formReducer = (state,event)=>{
 export default function AddUserForm(){
     const [formData, setFormData] = useReducer(formReducer, {})
     const handleSubmit = (e) =>{
+        console.log(e)
         e.preventDefault();
         if(Object.keys(formData).length == 0) return console.log("Doesn't have form data")
         console.log(formData)
