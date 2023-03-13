@@ -1,6 +1,7 @@
 import {BiEdit, BiTrashAlt} from 'react-icons/bi'
-
+import data from '../database/data.json';
 export default function Table(){
+    const list = [];
     return (
         <table className="min-w-full table-auto">
             <thead>
@@ -38,38 +39,59 @@ export default function Table(){
                 </tr>
             </thead>
             <tbody className="bg-gray-200">
-                <tr className="bg-gray-50 text-center">
-                    <td className="px-16 py-2 flex flex-row items-center">
-                        <img src="#" alt="" />
-                        <span className="text-center ml-2 font-semibold">Hikmatullah</span>
-                    </td>
-                    <td className="px-16 py-2">
-                        <span>hikmat@yahoo.com</span>
-                    </td>
-                    <td className="px-16 py-2">
-                        <span >25000</span>
-                    </td>
-                    <td className="px-16 py-2">
-                        <span >3/11/2023</span>
-                    </td>
-                    <td className="px-16 py-2">
-                        <button type="" className="cursor">
-                            <span className="bg-green-500 text-white px-5 py-1 rounded-full">
-                                Active
-                            </span>
-                        </button>
-                    </td>
-                    <td className="px-16 py-2 flex justify-around gap-5">
-                        <button type="" className="cursor">
-                            <BiEdit size={25} color={"rgb(34,197,94)"}></BiEdit>
-                        </button>
-                        <button type="" className="cursor">
-                            <BiTrashAlt size={25} color={"rgb(244,63,94)"}></BiTrashAlt>
-                        </button>
-                    </td>
-                </tr>
+             {
+                
+             
+            
+                // for Non array from Json
+            //  Object.keys(data).map(key =>{
+                
+            //      <DynamicRow>{data[key]}</DynamicRow>
+            //  })
+
+            // For Array of objects
+            data.map((obj) =>(
+                 <DynamicRow {...obj} key={obj.id}></DynamicRow>
+            ))
+             }
+             
             </tbody>
         </table>
 
+    )
+}
+
+function DynamicRow({id, name, avatar, email, salary, date, status}){
+    return (
+        <tr className="bg-gray-50 text-center">
+    <td className="px-16 py-2 flex flex-row items-center">
+        <img src={avatar || '#'} alt="" />
+        <span className="text-center ml-2 font-semibold">{name || "Unknown"}</span>
+    </td>
+    <td className="px-16 py-2">
+        <span>{email || "Unknown"}</span>
+    </td>
+    <td className="px-16 py-2">
+        <span >{salary || "Unknown"}</span>
+    </td>
+    <td className="px-16 py-2">
+        <span >{date || "Unknown"}</span>
+    </td>
+    <td className="px-16 py-2">
+        <button type="" className="cursor">
+            <span className="bg-green-500 text-white px-5 py-1 rounded-full">
+            {status || "Unknown"}
+            </span>
+        </button>
+    </td>
+    <td className="px-16 py-2 flex justify-around gap-5">
+        <button type="" className="cursor">
+            <BiEdit size={25} color={"rgb(34,197,94)"}></BiEdit>
+        </button>
+        <button type="" className="cursor">
+            <BiTrashAlt size={25} color={"rgb(244,63,94)"}></BiTrashAlt>
+        </button>
+    </td>
+</tr>
     )
 }

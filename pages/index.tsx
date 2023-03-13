@@ -14,7 +14,7 @@ import { useState  } from 'react';
 // import { Inter } from 'next/font/google';
 export default function Home() {
   const [visible, setVisible] = useState(false)
-  // show addemployee form, if addEmployee button clicked or else don't show form
+  // show addemployee form, if addEmployee button clicked or else don't show form by using visible
   const handler = () =>{
     setVisible(visible ? false:true)
   }
@@ -41,10 +41,10 @@ export default function Home() {
             </div>
 
           </div>
-          {/* form */}
-          <div className="container mx-auto py-5">
+          {/* form: will be addUserForm or UpdateUserForm */}
+          
             {visible ? <Form> </Form> : <></>}
-          </div>
+    
           {/* table */}
           <div className="container mx-auto">
             <Table>

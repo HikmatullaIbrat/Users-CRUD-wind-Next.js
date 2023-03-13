@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "name":"Hikmatullah Ibrat",
+        "avatar":"https://xsgames.co/randomusers/avatar.php?g=male",
+        "email":"artemforov@gmailos.com",
+        "salary":"25000",
+        "date":"2/3/2022",
+        "status":"Active"
+    },
+    {
+        "id": 2,
+        "name":"Shah Mohammad",
+        "avatar":"https://xsgames.co/randomusers/avatar.php?g=male",
+        "email":"artemforov@gmailos.com",
+        "salary":"25000",
+        "date":"12/23/2021",
+        "status":"Inactive"
+    }
+
+]
